@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Header } from "./components/Header/Header";
+import { Section } from "./components/section/Section";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Work } from "./components/section/Work";
+import { About } from "./components/section/About";
+import { Location } from "./components/section/Location";
+import { SignUp } from "./components/section/SignUp";
+import { Footer } from "./components/footer/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="w-100 h-100">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Section />}></Route>
+          <Route path="/home" element={<Section />}></Route>
+          <Route path="/work" element={<Work />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/location" element={<Location />}></Route>
+          <Route path="/signin" element={<SignUp />}></Route>
+          <Route path="*" element=
+            {
+              <div className="w-100" style={{height:"600px"}}>
+                <h2 className="text-center text-danger my-5">
+                  OOPS...Page Not Found[404-Error]
+                </h2>
+              </div>
+            }
+          ></Route>
+        </Routes>
+        <hr />
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
