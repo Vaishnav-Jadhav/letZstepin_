@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Header } from "./components/Header/Header";
 import { Section } from "./components/section/Section";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -7,11 +7,14 @@ import { About } from "./components/section/About";
 import { Location } from "./components/section/Location";
 import { SignUp } from "./components/section/SignUp";
 import { Footer } from "./components/footer/Footer";
+import { ScrollToTop } from "./components/section/ScrollToTop";
 
 function App() {
+
   return (
     <BrowserRouter>
       <div className="w-100 h-100">
+        <ScrollToTop/>
         <Header />
         <Routes>
           <Route path="/" element={<Section />}></Route>

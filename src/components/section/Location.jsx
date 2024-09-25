@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState } from "react";
+import'../Animation.css'
 
 
 export function Location()
@@ -13,7 +14,7 @@ export function Location()
 
     return(
         <>
-         <div className="w-100 bg-light p-5">
+         <div className="rowContainer w-100 bg-light p-5">
            <div className="w-75 m-auto d-flex " >
                 <div>
                     <img src={data.img} width={500}  className="rounded-4 shadow-lg"/>

@@ -1,11 +1,12 @@
 import { useState } from "react"
+import'./Animation.css'
 
 
 export function RowC(props)
 {  
     
     return (
-        <div className="bg-white w-100 my-3">
+        <div className="rowContainer bg-white w-100 my-3">
             <div className="m-3">
                     <h2 className="text-center p-2 text-black-50">{props.data.title}</h2>
             </div>

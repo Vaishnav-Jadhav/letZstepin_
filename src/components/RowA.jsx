@@ -1,4 +1,5 @@
 import { useState } from "react";
+import'./Animation.css'
 
 
 export function RowA(props)
@@ -6,7 +7,7 @@ export function RowA(props)
    
 
     return (
-        <div className="bg-white w-100">
+        <div className="rowContainer bg-white w-100">
             <div className="m-2">
                     <h2 className="text-center p-2 text-info">{props.data.title}</h2>
             </div>
