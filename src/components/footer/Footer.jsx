@@ -14,7 +14,7 @@ export function Footer()
 
     return(
         <footer className="w-100 bg-black pb-4">
-            <div className="bg-success w-100 p-2 text-black">
+            <div className="bg-success w-100 p-1 text-white">
                 <h2 className="text-center">378,068,644 Property photos, 360° panoramic images, vectors and videos</h2>
             </div>
             <div className="my-3 d-flex justify-content-center">
